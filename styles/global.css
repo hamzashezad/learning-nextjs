@@ -1,0 +1,26 @@
+body {
+	font-family: 'Hack', monospace;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+}
+
+nav a {
+	margin: 0 1rem;
+	padding: 0.5rem;
+}
+
+nav a:first-of-type {
+	margin-left: 0;
+}
+
+nav a:last-of-type {
+	margin-right: 0;
+}
+
+nav article {
+	font-size: 1.5rem;
+	flex: 1;
+}
