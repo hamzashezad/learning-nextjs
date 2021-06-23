@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { getAllProductData } from '../../lib/products';
+import { getProducts } from '../../lib/products';
 
 import Layout from '../../components/layout';
 
@@ -8,7 +8,7 @@ import Layout from '../../components/layout';
 export async function getStaticProps() {
 	return {
 		props: {
-			products: getAllProductData()
+			products: await getProducts()
 		}
 	};
 }
@@ -18,11 +18,11 @@ export default function Products({ products }) {
 		<Layout>
 			<h1>Products</h1>
 			<ol>
-				{products.map(({id, title}, i) => (
+				{products.map(({id, name, price}, i) => (
 					<li key={i}>
 						<Link href={'/products/' + id}>
-							<a>{title}</a>
-						</Link>
+							<a>{name}</a>
+						</Link>, £{price}
 					</li>
 				))}
 			</ol>

@@ -12,7 +12,7 @@ export function Cart() {
 	return (
 		<ol>
 			{ cart.map((item, i) => (
-				<li key={i}>{ item.title } ({ item.quantity })</li>
+				<li key={i}>{ item.name } ({ item.quantity })</li>
 			)) }
 		</ol>
 	);
