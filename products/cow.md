@@ -1,5 +1,0 @@
----
-title: 'cow'
----
-
-cow stuff
