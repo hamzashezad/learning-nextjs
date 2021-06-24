@@ -37,6 +37,8 @@ export default function Product({ product }) {
 
 			<h1>{ product.name }</h1>
 
+			<h2>£{ product.price }</h2>
+
 			<article>{ product.description }</article>
 
 			<AddToCart item={product} />
