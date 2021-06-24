@@ -14,6 +14,10 @@ function Navigation () {
 				<a>Home</a>
 			</Link>
 
+			<Link href="/categories">
+				<a>Categories</a>
+			</Link>
+
 			<Link href="/products">
 				<a>Products</a>
 			</Link>
