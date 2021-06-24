@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import { getProductIds, getProduct } from '../../lib/products';
 import Layout from '../../components/layout';
 import { AddToCart } from '../../components/cart';
@@ -28,7 +26,7 @@ export async function getStaticProps(props) {
 export default function Product({ product }) {
 	return (
 		<Layout>
-			<Image
+			<img
 				src={ `${process.env.directus.url}/assets/${product.header_image}` }
 				alt={ product.name }
 				width={100}
