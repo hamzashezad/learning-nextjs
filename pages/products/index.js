@@ -22,7 +22,7 @@ export default function Products({ products }) {
 					<li key={i}>
 						<Link href={'/products/' + id}>
 							<a>{name}</a>
-						</Link>, £{price}
+						</Link>, £{price / 100}
 					</li>
 				))}
 			</ol>

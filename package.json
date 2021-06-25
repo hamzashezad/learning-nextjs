@@ -10,11 +10,14 @@
   },
   "dependencies": {
     "@directus/sdk": "^9.0.0-rc.80",
+    "@stripe/stripe-js": "^1.15.1",
     "gray-matter": "^4.0.3",
     "next": "^10.0.0",
+    "node-fetch": "^2.6.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "remark": "^13.0.0",
-    "remark-html": "^13.0.1"
+    "remark-html": "^13.0.1",
+    "stripe": "^8.156.0"
   }
 }

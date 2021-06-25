@@ -18,13 +18,13 @@ export const CartProvider = (props) => {
 			const storedNumItems = window.localStorage.getItem('numItems')
 
 			if (storedNumItems !== null) {
-				setNumItems(Number.parseFloat(storedNumItems));
+				setNumItems(Number.parseInt(storedNumItems));
 			}
 
 			const storedCost = window.localStorage.getItem('cost')
 
 			if (storedCost !== null) {
-				setCost(+Number.parseFloat(storedCost).toFixed(2));
+				setCost(Number.parseInt(storedCost));
 			}
 		}
 	}, []);

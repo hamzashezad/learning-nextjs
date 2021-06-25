@@ -35,7 +35,7 @@ export default function Product({ product }) {
 
 			<h1>{ product.name }</h1>
 
-			<h2>£{ product.price }</h2>
+			<h2>£{ product.price / 100.0 }</h2>
 
 			<article>{ product.description }</article>
 

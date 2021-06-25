@@ -2,7 +2,9 @@ import { useContext, useEffect, useState } from 'react';
 
 import { CartContext } from '../../contexts/cart';
 
-export function Cart() {
+import getStripe from '../../utils/getStripe';
+
+export default function Cart() {
 	const [
 		cart, setCart,
 		numItems, setNumItems,
@@ -20,20 +22,10 @@ export function Cart() {
 					<li key={i}>{ item.name } ({ item.quantity })</li>
 				)) }
 			</ol>
-			<article><strong>Total:</strong> £{ cost }</article>
+			<article><strong>Total:</strong> £{ cost / 100 }</article>
 		</>
 	);
 };
-
-export function NavCart() {
-	const [
-		cart, setCart,
-		numItems, setNumItems,
-		cost, setCost
-	] = useContext(CartContext);
-
-	return <article>{ numItems } items (£{ cost })</article>;
-}
 
 export function AddToCart(item) {
 	const [
@@ -43,9 +35,9 @@ export function AddToCart(item) {
 	] = useContext(CartContext);
 
 	const add = ({ item }) => {
-		setNumItems((num) => Number.parseInt(num) + 1);
+		setNumItems((num) => parseInt(num) + 1);
 
-		setCost((c) => +Number.parseFloat(parseFloat(c) + item.price).toFixed(2));
+		setCost((c) => parseInt(parseInt(c) + item.price));
 
 		setCart((items) => {
 			const found = items.findIndex((element) => element.id == item.id);

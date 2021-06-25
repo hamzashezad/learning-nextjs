@@ -2,7 +2,8 @@
 // shows a list of all items in cart, checkout options
 
 import Layout from '../../components/layout';
-import { Cart } from '../../components/cart';
+import Cart from '../../components/cart';
+import CheckoutButton from '../../components/checkoutButton';
 
 export default function Checkout() {
 	return (
@@ -10,6 +11,8 @@ export default function Checkout() {
 			<h1>Checkout</h1>
 
 			<Cart />
+
+			<CheckoutButton />
 		</Layout>
 	);
 }

@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
-import { NavCart } from '../cart';
+import NavCart from './navCart';
 
 import styles from './navigation.module.css';
 
-function Navigation () {
+export default function Navigation () {
 	{/* use `Link` to use client-side navigation */}
 	return (
 		<nav className="Navigation">
@@ -28,5 +28,3 @@ function Navigation () {
 		</nav>
 	);
 }
-
-export default Navigation;
